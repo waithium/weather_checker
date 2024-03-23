@@ -3,7 +3,7 @@
 import requests
 
 weather_api_key = 'YOUR API HERE' #this code uses uses OpenWeatherMap API service
-city_name = input('enter your city name: ')
+city_name = input('enter your city name: ').lower()
 
 weather_data = requests.get(f"https://api.openweathermap.org/data/2.5/weather?q={city_name}&units=imperial&APPID={weather_api_key}")
 
